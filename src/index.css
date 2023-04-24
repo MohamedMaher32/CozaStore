@@ -148,6 +148,14 @@ nav {
   font-size: 28px;
   line-height: 1.2857;
 }
+@media screen and (max-width:499px) {
+  .layout h3{
+    font-size: 22px !important;
+  }
+  .layout h1{
+    font-size: 35px !important;
+  }
+}
 
 .btn-bg {
   background-color: var(--main-color);
