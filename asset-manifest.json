@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CozaStore/static/css/main.59ca5de6.css",
+    "main.css": "/CozaStore/static/css/main.3be80ee4.css",
     "main.js": "/CozaStore/static/js/main.dd806ebf.js",
     "static/js/787.c2c1715b.chunk.js": "/CozaStore/static/js/787.c2c1715b.chunk.js",
     "static/media/fa-solid-900.ttf": "/CozaStore/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
@@ -19,12 +19,12 @@
     "static/media/fa-v4compatibility.ttf": "/CozaStore/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
     "static/media/fa-v4compatibility.woff2": "/CozaStore/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/CozaStore/index.html",
-    "main.59ca5de6.css.map": "/CozaStore/static/css/main.59ca5de6.css.map",
+    "main.3be80ee4.css.map": "/CozaStore/static/css/main.3be80ee4.css.map",
     "main.dd806ebf.js.map": "/CozaStore/static/js/main.dd806ebf.js.map",
     "787.c2c1715b.chunk.js.map": "/CozaStore/static/js/787.c2c1715b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59ca5de6.css",
+    "static/css/main.3be80ee4.css",
     "static/js/main.dd806ebf.js"
   ]
 }
