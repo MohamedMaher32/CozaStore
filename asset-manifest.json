@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CozaStore/static/css/main.3be80ee4.css",
-    "main.js": "/CozaStore/static/js/main.dd806ebf.js",
+    "main.js": "/CozaStore/static/js/main.de5a4bc6.js",
     "static/js/787.c2c1715b.chunk.js": "/CozaStore/static/js/787.c2c1715b.chunk.js",
     "static/media/fa-solid-900.ttf": "/CozaStore/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/CozaStore/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
@@ -11,6 +11,7 @@
     "static/media/blog-03.jpg": "/CozaStore/static/media/blog-03.e197971fff03f9c70325.jpg",
     "static/media/error.svg": "/CozaStore/static/media/error.bd59b2df95663c0b2356b20fcbfd57e4.svg",
     "static/media/fa-brands-400.woff2": "/CozaStore/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
+    "static/media/emptycart.png": "/CozaStore/static/media/emptycart.4d8f559caff497ed7996.png",
     "static/media/slide3.jpg": "/CozaStore/static/media/slide3.522dd034a589dc7cbb68.jpg",
     "static/media/slide1.jpg": "/CozaStore/static/media/slide1.6c34bde1720c7680eb05.jpg",
     "static/media/fa-regular-400.ttf": "/CozaStore/static/media/fa-regular-400.d87474231f4192884802.ttf",
@@ -20,11 +21,11 @@
     "static/media/fa-v4compatibility.woff2": "/CozaStore/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/CozaStore/index.html",
     "main.3be80ee4.css.map": "/CozaStore/static/css/main.3be80ee4.css.map",
-    "main.dd806ebf.js.map": "/CozaStore/static/js/main.dd806ebf.js.map",
+    "main.de5a4bc6.js.map": "/CozaStore/static/js/main.de5a4bc6.js.map",
     "787.c2c1715b.chunk.js.map": "/CozaStore/static/js/787.c2c1715b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3be80ee4.css",
-    "static/js/main.dd806ebf.js"
+    "static/js/main.de5a4bc6.js"
   ]
 }
