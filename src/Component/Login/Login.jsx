@@ -51,29 +51,31 @@ export default function Login() {
   // design form
   return (
     <div className='login'>
-      <div className='w-50 mx-auto rounded-3 alll mb-5 shadow p-5 bg-white'>
-      <h2 className='text-center'>Login Now:</h2>
-      <form onSubmit={formik.handleSubmit}>
-        <div className='my-3'>
-          <label htmlFor="email">Email:</label>
-          <input onChange={formik.handleChange} type="email" className='form-control' id='email' name='email' />
-          <p className='text-danger'>{formik.errors.email}</p>
+      <div className="container mt-4">
+        <div className='w-100 mx-auto rounded-3 alll mb-5 shadow p-5 bg-white'>
+          <h2 className='text-center'>Login Now:</h2>
+          <form onSubmit={formik.handleSubmit}>
+            <div className='my-3'>
+              <label htmlFor="email">Email:</label>
+              <input onChange={formik.handleChange} type="email" className='form-control' id='email' name='email' />
+              <p className='text-danger'>{formik.errors.email}</p>
+            </div>
+            <div className='my-3'>
+              <label htmlFor="password">Password:</label>
+              <input onChange={formik.handleChange} type="password" className='form-control' id='password' name='password' />
+              <p className='text-danger'>{formik.errors.password}</p>
+            </div>
+            <Link to='/forgetpassowrd'>Forgrt Password?</Link>
+            {errMsg != "" ? <div className='alert alert-danger'>{errMsg}</div> : ""}
+            {loading ? <button type='button' className='btn btn-bg2 d-flex mx-auto'><i className='fa-solid fa-spinner fa-spin'></i></button>
+              :
+              <button disabled={!formik.isValid} type='submit' className='btn btn-bg2 d-flex mx-auto'>Login</button>}
+          </form>
         </div>
-        <div className='my-3'>
-          <label htmlFor="password">Password:</label>
-          <input onChange={formik.handleChange} type="password" className='form-control' id='password' name='password' />
-          <p className='text-danger'>{formik.errors.password}</p>
-        </div>
-        <Link to='/forgetpassowrd'>Forgrt Password?</Link>
-        {errMsg != "" ? <div className='alert alert-danger'>{errMsg}</div> : ""}
-        {loading ? <button type='button' className='btn btn-bg2 d-flex mx-auto'><i className='fa-solid fa-spinner fa-spin'></i></button>
-          :
-          <button disabled={!formik.isValid} type='submit' className='btn btn-bg2 d-flex mx-auto'>Login</button>}
-      </form>
+      </div>
+      <div className='all'>
+        <Footer />
+      </div>
     </div>
-    <div className='all'>
-    <Footer />
-    </div>
-  </div>
   )
 }

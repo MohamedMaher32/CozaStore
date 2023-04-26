@@ -11,33 +11,34 @@ export function CartContextProvider(props) {
     // cart object
     let [cartList, setCartList] = useState()
     // call allCartData
-    useEffect(()=>{
-      getAllCartData()
-    },[])
+    useEffect(() => {
+        getAllCartData()
+    }, [])
     // api get all cart 
     async function getAllCartData() {
         let headers = { token: localStorage.getItem("token") }
-        let { data } = await axios.get(`${baseUrl}/api/v1/cart`, {headers}).catch((err)=>{
+        let { data } = await axios.get(`${baseUrl}/api/v1/cart`, { headers }).catch((err) => {
             console.log(err.response.data.statusMsg);
         })
+
         $(".loading").fadeOut(1500)
         console.log(data);
         setCartList(data)
     }
-    async function deleteItemCard(id){
+    async function deleteItemCard(id) {
         let headers = { token: localStorage.getItem("token") }
-        let {data} = await axios.delete(`${baseUrl}/api/v1/cart/${id}`, {headers})
+        let { data } = await axios.delete(`${baseUrl}/api/v1/cart/${id}`, { headers })
         setCartList(data)
-        toast.error("Product deleted successfully from your cart" , {className:" box-shadow" , duration: 2000})
+        toast.error("Product deleted successfully from your cart", { className: " box-shadow", duration: 2000 })
     }
-    async function updateQuantity(id ,count){
-        let body = {count:count}
+    async function updateQuantity(id, count) {
+        let body = { count: count }
         let headers = { token: localStorage.getItem("token") }
-        let {data} = await axios.put(`${baseUrl}/api/v1/cart/${id}`, body ,{headers})
+        let { data } = await axios.put(`${baseUrl}/api/v1/cart/${id}`, body, { headers })
         setCartList(data)
-        toast.success("Product updated successfully" , {className:" box-shadow" , duration: 2000})
+        toast.success("Product updated successfully", { className: " box-shadow", duration: 2000 })
     }
-    return <CartContext.Provider value={{ cartList , getAllCartData , deleteItemCard , updateQuantity}}>
+    return <CartContext.Provider value={{ cartList, getAllCartData, deleteItemCard, updateQuantity }}>
         {props.children}
     </CartContext.Provider>
 }

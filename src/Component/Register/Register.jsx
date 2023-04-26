@@ -53,43 +53,45 @@ export default function Resigster() {
   // design form
   return (
     <div className='register'>
-      <div className='w-75 mx-auto rounded-3 alll mb-5 shadow p-5 bg-white'>
-        <h2 className='text-center'>Register Now:</h2>
-        <form onSubmit={formik.handleSubmit}>
-          <div className='my-3'>
-            <label htmlFor="name">Name</label>
-            <input onChange={formik.handleChange} type="text" className='form-control' id='name' name='name' />
-            <p className='text-danger'>{formik.errors.name}</p>
-          </div>
-          <div className='my-3'>
-            <label htmlFor="email">Email:</label>
-            <input onChange={formik.handleChange} type="email" className='form-control' id='email' name='email' />
-            <p className='text-danger'>{formik.errors.email}</p>
-          </div>
-          <div className='my-3'>
-            <label htmlFor="password">Password:</label>
-            <input onChange={formik.handleChange} type="password" className='form-control' id='password' name='password' />
-            <p className='text-danger'>{formik.errors.password}</p>
-          </div>
-          <div className='my-3'>
-            <label htmlFor="rePassword">Repassword:</label>
-            <input onChange={formik.handleChange} type="password" className='form-control' id='rePassword' name='rePassword' />
-            <p className='text-danger'>{formik.errors.rePassword}</p>
-          </div>
-          <div className='my-3'>
-            <label htmlFor="phone">Phone:</label>
-            <input onChange={formik.handleChange} type="text" className='form-control' id='phone' name='phone' />
-            <p className='text-danger'>{formik.errors.phone}</p>
-          </div>
+      <div className='container mt-4'>
+        <div className='w-100 mx-auto rounded-3 alll mb-5 shadow p-5 bg-white'>
+          <h2 className='text-center'>Register Now:</h2>
+          <form onSubmit={formik.handleSubmit}>
+            <div className='my-3'>
+              <label htmlFor="name">Name</label>
+              <input onChange={formik.handleChange} type="text" className='form-control' id='name' name='name' />
+              <p className='text-danger'>{formik.errors.name}</p>
+            </div>
+            <div className='my-3'>
+              <label htmlFor="email">Email:</label>
+              <input onChange={formik.handleChange} type="email" className='form-control' id='email' name='email' />
+              <p className='text-danger'>{formik.errors.email}</p>
+            </div>
+            <div className='my-3'>
+              <label htmlFor="password">Password:</label>
+              <input onChange={formik.handleChange} type="password" className='form-control' id='password' name='password' />
+              <p className='text-danger'>{formik.errors.password}</p>
+            </div>
+            <div className='my-3'>
+              <label htmlFor="rePassword">Repassword:</label>
+              <input onChange={formik.handleChange} type="password" className='form-control' id='rePassword' name='rePassword' />
+              <p className='text-danger'>{formik.errors.rePassword}</p>
+            </div>
+            <div className='my-3'>
+              <label htmlFor="phone">Phone:</label>
+              <input onChange={formik.handleChange} type="text" className='form-control' id='phone' name='phone' />
+              <p className='text-danger'>{formik.errors.phone}</p>
+            </div>
 
-          {errMsg != "" ? <div className='alert alert-danger'>{errMsg}</div> : ""}
-          {loading ? <button type='button' className='btn btn-bg2 d-flex mx-auto'><i className='fa-solid fa-spinner fa-spin'></i></button>
-            :
-            <button disabled={!formik.isValid} type='submit' className='btn btn-bg2 d-flex mx-auto'>Register</button>}
-        </form>
+            {errMsg != "" ? <div className='alert alert-danger'>{errMsg}</div> : ""}
+            {loading ? <button type='button' className='btn btn-bg2 d-flex mx-auto'><i className='fa-solid fa-spinner fa-spin'></i></button>
+              :
+              <button disabled={!formik.isValid} type='submit' className='btn btn-bg2 d-flex mx-auto'>Register</button>}
+          </form>
+        </div>
       </div>
       <div className='all'>
-      <Footer />
+        <Footer />
       </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../../Context/CartContext'
 import { Link } from 'react-router-dom'
+import empetyCart from '../../Assets/emptycart.png'
 import Footer from '../Footer/Footer'
 export default function CartDateiles() {
     // get context
@@ -14,7 +15,7 @@ export default function CartDateiles() {
                 <span className="loader"></span>
             </div>
             <div className="container py-4">
-                <div className='table-responsive mt-3 '>
+                {(cartList?.numOfCartItems != 0) ? <div className='table-responsive mt-3 '>
                     {cartList ?
                         <div className='d-flex justify-content-center align-items-center flex-column'>
                             <table className='table   table-bordered table-sm text-center' style={{ verticalAlign: 'middle' }}>
@@ -47,10 +48,11 @@ export default function CartDateiles() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <Link to={"/checkout/" + cartList.data._id} className='btn btn-bg2 my-4'>Checkout Payment</Link>
+                            <Link to={"/checkout/" + cartList?.data._id} className='btn btn-bg2 my-4'>Checkout Payment</Link>
                         </div>
                         : ""}
-                </div>
+                </div>: <div className='d-flex justify-content-center align-items-center'><img src={empetyCart} alt="empetycart"  className='w-50'/></div>}
+                
             </div>
             <Footer />
 
