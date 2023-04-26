@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from '../../Assets/logo.png'
+import empetyCart from '../../Assets/emptycart.png'
 import { FunctionContext } from '../../Context/ShareFunction'
- import { CartContext } from '../../Context/CartContext'
+import { CartContext } from '../../Context/CartContext'
 export default function Navbar() {
   let { userData, deleteData } = useContext(FunctionContext)
   let { cartList, deleteItemCard, updateQuantity } = useContext(CartContext)
@@ -39,7 +40,7 @@ export default function Navbar() {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {userData ?
                 <>
-                 <li className="nav-item  mt-2 me-3 " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                  <li className="nav-item  mt-2 me-3 " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <div className=" position-relative p-2 rounded-2">
                       <i className="fa-solid fa-cart-shopping  fs-4 cusror text-white"></i>
                       <span className="position-absolute start-25 translate-middle badge cart">{cartList?.numOfCartItems}</span>
@@ -69,23 +70,27 @@ export default function Navbar() {
         </div>
         <div className="offcanvas-body">
           <h4 className='text-center bg-dark text-white py-2'>Total Price: {cartList?.data.totalCartPrice}$</h4>
-          {cartList ?
-            cartList.data.products.map((el) => {
-              return <div className='border-bottom py-2' key={el._id}>
-                <h6 className='fw-bold text-center cartsidbar'>{el.product.title}</h6>
-                <div className='d-flex justify-content-between align-items-center'>
-                  <img src={el.product.imageCover} alt="" height={50} className='w-25' />
-                  <span className='mx-2'>{el.price}$</span>
-                  <div>
-                    <button className='btn btn-success px-1 py-0 fw-bold cusror' onClick={() => { updateQuantity(el.product._id, el.count += 1) }}>+</button>
-                    <span className='mx-2'>{el.count}</span>
-                    <button className='btn btn-danger px-1 py-0 fw-bold  cusror' onClick={() => { updateQuantity(el.product._id, (el.count > 0)? el.count -= 1:0) }}>-</button>
+          {(cartList?.numOfCartItems != 0) ? 
+          <>
+            {cartList ?
+              cartList.data.products.map((el) => {
+                return <div className='border-bottom py-2' key={el._id}>
+                  <h6 className='fw-bold text-center cartsidbar'>{el.product.title}</h6>
+                  <div className='d-flex justify-content-between align-items-center'>
+                    <img src={el.product.imageCover} alt="" height={50} className='w-25' />
+                    <span className='mx-2'>{el.price}$</span>
+                    <div>
+                      <button className='btn btn-success px-1 py-0 fw-bold cusror' onClick={() => { updateQuantity(el.product._id, el.count += 1) }}>+</button>
+                      <span className='mx-2'>{el.count}</span>
+                      <button className='btn btn-danger px-1 py-0 fw-bold  cusror' onClick={() => { updateQuantity(el.product._id, (el.count > 0) ? el.count -= 1 : 0) }}>-</button>
+                    </div>
+                    <i className="fa-solid fa-trash text-danger fs-4 cusror" onClick={() => deleteItemCard(el.product._id)}></i>
                   </div>
-                  <i className="fa-solid fa-trash text-danger fs-4 cusror" onClick={() => deleteItemCard(el.product._id)}></i>
                 </div>
-              </div>
-            })
-            : ""}
+              })
+              : ""}
+          </>: <div className='d-flex justify-content-center align-items-center'><img src={empetyCart} alt="empetycart"  className='w-100'/></div>}
+          
         </div>
         <div className='offcanvas-bottom'>
           <div className='d-flex justify-content-around align-items-center py-3'>
