@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CozaStore/static/css/main.3be80ee4.css",
-    "main.js": "/CozaStore/static/js/main.356f8e71.js",
+    "main.js": "/CozaStore/static/js/main.454674ec.js",
     "static/js/787.c2c1715b.chunk.js": "/CozaStore/static/js/787.c2c1715b.chunk.js",
     "static/media/fa-solid-900.ttf": "/CozaStore/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/CozaStore/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
@@ -21,11 +21,11 @@
     "static/media/fa-v4compatibility.woff2": "/CozaStore/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/CozaStore/index.html",
     "main.3be80ee4.css.map": "/CozaStore/static/css/main.3be80ee4.css.map",
-    "main.356f8e71.js.map": "/CozaStore/static/js/main.356f8e71.js.map",
+    "main.454674ec.js.map": "/CozaStore/static/js/main.454674ec.js.map",
     "787.c2c1715b.chunk.js.map": "/CozaStore/static/js/787.c2c1715b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3be80ee4.css",
-    "static/js/main.356f8e71.js"
+    "static/js/main.454674ec.js"
   ]
 }
