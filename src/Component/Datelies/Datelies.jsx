@@ -40,9 +40,9 @@ export default function Datelies() {
     console.log(data);
     setLoading(false)
     if (data.status == "success") {
-      toast.success(data.message , {className:" box-shadow",duration: 2000})
+      toast.success(data.message , {className:" box-shadow",duration: 1000})
       getAllCartData()
-      // navigate("/cartdatiles")
+      navigate("/cartdatiles")
     }
   }
   return (

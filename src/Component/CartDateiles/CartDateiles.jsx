@@ -6,6 +6,7 @@ import Footer from '../Footer/Footer'
 export default function CartDateiles() {
     // get context
     let { getAllCartData, cartList, deleteItemCard, updateQuantity } = useContext(CartContext)
+    console.log(cartList)
     useEffect(() => {
         getAllCartData()
     }, [])
